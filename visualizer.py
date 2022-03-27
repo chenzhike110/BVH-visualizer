@@ -122,6 +122,7 @@ class bvh_visual(QtOpenGL.QGLWidget):
             glPolygonMode (GL_FRONT_AND_BACK, GL_FILL)
 
     def drawJoint(self, joint):
+        self.offset = self.skeleton.root.worldpos
         pos = self.getPosition(joint)
         #if pos[0] == pos[1] == pos[2] == 0:
         #    print joint.name
